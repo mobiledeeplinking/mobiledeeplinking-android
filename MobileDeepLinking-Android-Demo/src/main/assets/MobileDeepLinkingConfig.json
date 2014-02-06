@@ -1,0 +1,25 @@
+{
+    "logging": "true",
+    "defaultRoute": {
+        "class": "com.mobiledeeplinking.android.demo.MainActivity"
+    },
+    "routes": {
+        "handler": {
+            "handlers": ["testHandler"],
+            "class": "com.mobiledeeplinking.android.demo.SecondActivity"
+        },
+        "handler/:handlerId": {
+            "handlers": ["testHandler"],
+            "class": "com.mobiledeeplinking.android.demo.SecondActivity",
+            "routeParameters" : {
+                "handlerId" : {
+                    "regex": "[0-9]"
+                }
+            }
+        },
+        "handler/order": {
+            "handlers": ["testHandler", "testHandler2"],
+            "class": "com.mobiledeeplinking.android.demo.SecondActivity"
+        }
+    }
+}
