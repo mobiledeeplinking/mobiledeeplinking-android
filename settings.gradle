@@ -1,1 +1,1 @@
-include ':MobileDeepLinking-Android-Demo', 'MobileDeepLinking'
+include ':MobileDeepLinking-Android-Demo', 'MobileDeepLinking-Android-SDK'

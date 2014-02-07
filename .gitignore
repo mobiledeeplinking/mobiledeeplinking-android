@@ -1,4 +1,6 @@
-lt application files
+*.swp
+
+# application files
 *.apk
 *.ap_
 
