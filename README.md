@@ -1,0 +1,1 @@
+# MobileDeepLinking-Android [![Build Status](https://travis-ci.org/mobiledeeplinking/mobiledeeplinking-android.png?branch=travis-tweaks)](https://travis-ci.org/mobiledeeplinking/mobiledeeplinking-android)
