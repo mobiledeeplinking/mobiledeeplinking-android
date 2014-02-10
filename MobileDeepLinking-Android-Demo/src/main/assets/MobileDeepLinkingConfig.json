@@ -19,7 +19,7 @@
         },
         "handler/order": {
             "handlers": ["testHandler", "testHandler2"],
-            "class": "com.mobiledeeplinking.android.demo.SecondActivity"
+            "class": "com.mobiledeeplinking.android.demo.ThirdActivity"
         }
     }
 }
