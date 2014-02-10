@@ -40,6 +40,9 @@ public class IntentBuilder
         try
         {
             Intent intent = new Intent(context, Class.forName(activityName));
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
             if (routeParameters != null)
             {
                 for (Map.Entry<String, String> param : routeParameters.entrySet())

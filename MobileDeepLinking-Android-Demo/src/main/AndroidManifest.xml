@@ -23,7 +23,8 @@
         </activity>
         <activity
             android:name="org.mobiledeeplinking.android.MobileDeepLinking"
-            android:theme="@android:style/Theme.NoDisplay">
+            android:theme="@android:style/Theme.NoDisplay"
+            android:noHistory="true">
             <intent-filter>
                 <data android:scheme="mdldemo"/>
                 <action android:name="android.intent.action.VIEW" />
