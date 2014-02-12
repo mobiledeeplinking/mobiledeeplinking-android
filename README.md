@@ -1,6 +1,6 @@
 # MobileDeepLinking-Android [![Build Status](https://travis-ci.org/mobiledeeplinking/mobiledeeplinking-android.png?branch=master)](https://travis-ci.org/mobiledeeplinking/mobiledeeplinking-android)
 
-This project is the Android component of the MobileDeepLinking specification, the industry standard for mobile application deeplinking. This spec and accompanying libraries simplify and reduce implementation of deep links as well as provide flexible and powerful features for routing to custom behavior.
+This project is the Android component of the MobileDeepLinking specification, the industry standard for mobile application deeplinking. This spec and accompanying libraries simplify and reduce implementation time of deep links as well as provide flexible and powerful features for routing to custom behavior.
 
 ## Features
 
@@ -44,13 +44,15 @@ Insert the following into your `AndroidManifest.xml`:
         android:theme="@android:style/Theme.NoDisplay"
         android:noHistory="true">
         <intent-filter>
-            <data android:scheme="mdldemo"/>
+            <data android:scheme="{DEEP_LINK_SCHEME}"/>
             <action android:name="android.intent.action.VIEW" />
             <category android:name="android.intent.category.VIEW" />
             <category android:name="android.intent.category.DEFAULT" />
             <category android:name="android.intent.category.BROWSABLE" />
         </intent-filter>
     </activity>
+
+Where {DEEP_LINK_SCHEME} is replaced with your desired scheme. For example, replacing it with `mdldemo` would map the url scheme `mdldemo://` to your app.
 
 ### Optional
 
