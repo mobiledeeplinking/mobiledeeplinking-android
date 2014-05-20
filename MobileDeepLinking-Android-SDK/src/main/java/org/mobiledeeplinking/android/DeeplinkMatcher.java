@@ -138,26 +138,28 @@ public class DeeplinkMatcher
         if (routeOptions.has(Constants.ROUTE_PARAMS_JSON_NAME))
         {
             routeParameters = routeOptions.getJSONObject(Constants.ROUTE_PARAMS_JSON_NAME);
-            List<String> queryPairs = Arrays.asList(deeplinkQuery.split("&"));
-            for (String query : queryPairs)
-            {
-                List<String> nameAndValue = Arrays.asList(query.split("="));
-                if (nameAndValue.size() == 2)
+            if (deeplinkQuery != null) {
+                List<String> queryPairs = Arrays.asList(deeplinkQuery.split("&"));
+                for (String query : queryPairs)
                 {
-                    String name = Uri.decode(nameAndValue.get(0));
-                    if (!routeParameters.has(name))
+                    List<String> nameAndValue = Arrays.asList(query.split("="));
+                    if (nameAndValue.size() == 2)
                     {
-                        continue;
-                    }
+                        String name = Uri.decode(nameAndValue.get(0));
+                        if (!routeParameters.has(name))
+                        {
+                            continue;
+                        }
 
-                    String value = Uri.decode(nameAndValue.get(1));
-                    if (validateRouteComponent(name, value, routeOptions))
-                    {
-                        results.put(name, value);
-                    } else
-                    {
-                        MDLLog.e("DeeplinkMatcher", "Query Parameter Regex Checking failed.");
-                        return null;
+                        String value = Uri.decode(nameAndValue.get(1));
+                        if (validateRouteComponent(name, value, routeOptions))
+                        {
+                            results.put(name, value);
+                        } else
+                        {
+                            MDLLog.e("DeeplinkMatcher", "Query Parameter Regex Checking failed.");
+                            return null;
+                        }
                     }
                 }
             }
