@@ -48,7 +48,7 @@ public class DeeplinkMatcher
         {
             return null;
         }
-        results = matchQueryParameters(routeOptions, deeplink.getQuery(), results);
+        results = matchQueryParameters(routeOptions, deeplink.getEncodedQuery(), results);
         if (results == null)
         {
             return null;
