@@ -105,7 +105,6 @@ public class MobileDeepLinking extends Activity
             try
             {
                 Map<String, String> routeParameters = new HashMap<String, String>();
-                routeParameters = DeeplinkMatcher.match(route, routeOptions, routeParameters, deeplink);
                 Set<String> queryParameterNames = getQueryParameterNames(deeplink);
                 if ( !queryParameterNames.isEmpty() )
                 {
@@ -114,6 +113,7 @@ public class MobileDeepLinking extends Activity
                         routeParameters.put(paramName, deeplink.getQueryParameter(paramName));
                     }
                 }
+                routeParameters = DeeplinkMatcher.match(route, routeOptions, routeParameters, deeplink);
                 if (routeParameters != null)
                 {
                     handleRoute(routeOptions, routeParameters);
