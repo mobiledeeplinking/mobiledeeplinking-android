@@ -113,6 +113,7 @@ public class MobileDeepLinking extends Activity
                         routeParameters.put(paramName, deeplink.getQueryParameter(paramName));
                     }
                 }
+                routeParameters.put("route", deeplink.getHost());
                 routeParameters = DeeplinkMatcher.match(route, routeOptions, routeParameters, deeplink);
                 if (routeParameters != null)
                 {
