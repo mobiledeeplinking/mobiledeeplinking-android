@@ -1,36 +1,16 @@
-*.swp
-
-# application files
-*.apk
-*.ap_
-
-# files for the dex VM
-*.dex
-
-# Java class files
-*.class
-
-# generated files
-bin/
-gen/
+# Gradle files
+.gradle/
+build/
 
 # Local configuration file (sdk path, etc)
 local.properties
 
-# Eclipse project files
-.classpath
-.project
-
-# Android Studio
+# IntelliJ project files
+*.iml
 .idea/
-.gradle
-/*/local.properties
-/*/out
-/*/*/build
-/*/*/production
-*.iws
-*~
-*.swp.gradle
-/local.properties
-/.idea/workspace.xml
-.ds_store
+
+# Android Studio captures folder
+captures/
+
+# Misc
+.DS_Store
