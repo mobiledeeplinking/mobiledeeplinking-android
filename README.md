@@ -1,3 +1,6 @@
+# This Repository is no longer maintained.
+Issue reports and pull requests will not be attended.
+
 # MobileDeepLinking-Android [![Build Status](https://travis-ci.org/mobiledeeplinking/mobiledeeplinking-android.png?branch=master)](https://travis-ci.org/mobiledeeplinking/mobiledeeplinking-android)
 
 This project is the Android component of the MobileDeepLinking specification, the industry standard for mobile application deeplinking. This spec and accompanying libraries simplify and reduce implementation time of deep links as well as provide flexible and powerful features for routing to custom behavior.
