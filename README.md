@@ -75,7 +75,7 @@ Register Custom Handlers (if desired) in a subclass of your app's `Application` 
             });
         }
     }
-    
+
 ## Demo App
 
 Part of the `MobileDeepLinking-Android.iml` project consists of a demo app, `MobileDeepLinking-Android-Demo`. This is a demo application that provides an example implementation of the `MobileDeepLinkingConfig.json` file, along with several custom handlers that demonstrate how to route to client-specified functionality. It also provides example routing to several different activities.
